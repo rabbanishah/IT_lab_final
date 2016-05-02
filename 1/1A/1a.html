@@ -1,0 +1,41 @@
+<!--(a)	Develop a web page using HTML5 that includes following fields in the form  Name, USN, Department, DOB, CGPA, E-mail, color. There is a “Submit” button which will submit the form after validation.-->
+<!doctype HTML>
+<head>
+    <title> Question One</title>
+
+    
+</head>
+<body>
+    <script type="text/javascript">
+    function validate()
+        {   alert("hello"); 
+            if(document.student.name.value=="")
+                alert("Name cannot be empty");
+            if(document.student.usn.value=="")
+                alert("usn cannot be empty");
+            if(document.student.dept.value=="")
+                alert("dept cannot be empty");
+            if(document.student.email.value=="")
+                alert("email cannot be empty");
+         
+         
+            var usn=document.student.usn.value;
+            if(!/1[Mm][Ss]\d{2}[A-Za-z]{2}\d{3}/.test(usn))
+            { alert("USN IS NOT VALID ");
+             return false
+//            alert(name);
+//         return true;
+            }
+        }
+    </script>
+    <form name="student" method="get" onsubmit="return(validate());">
+    USN <input type="text" name="usn">
+    Name <input type="text" name="name">
+    Dept <input type="text" name="dept">
+    DOB <input type="date" name="date">
+    CGPA <input type="number" name="cgpa">
+    email <input type="text" name="email">
+    Color <input type="color" name="color">
+    <input type="submit" value="Submit"> 
+    </form>
+</body>
