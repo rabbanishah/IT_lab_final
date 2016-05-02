@@ -1,0 +1,39 @@
+<!doctype HTML>
+<head>
+<script type="text/javascript">
+
+    function validate()
+    {
+        var name=document.getElementsByName("name")[0].value;
+        var user=document.getElementsByName("username")[0].value;
+        var pwd1=document.getElementsByName("password1")[0].value;
+        var pwd2=document.getElementsByName("password2")[0].value;
+        if(name=="")
+            alert("NAME CANNOT BE EMPTY");
+        if(user=="")
+            alert("USERNAME CANNOT BE EMPTY");
+        if(pwd1=="")
+        {   alert("PASSWORD CANNOT BE EMPTY");
+            return false;
+        }
+        if(!(pwd1==pwd2))
+        {   alert("BOTH PASSWORDS SHOULD BE THE SAME");
+            return false;
+        }
+        
+        alert("PERFECT");
+    }
+</script>
+</head>
+
+<body>
+    <h1> ENTER PERSONAL DETAILS :</h1>
+    <br><br><hr><br>
+<form>
+ENTER NAME : <input type="text" name="name"><br><br>
+ENTER USERNAME : <input type="text" name="username"><br><br>
+ENTER PASSWORD : <input type="password" name="password1"><br><br>
+ENTER PASSWORD AGAIN : <input type="password" name="password2"><br><br>
+<input type="submit" name="submit" value="Submit " onclick="validate()"><br><br>
+</form>    
+</body>

@@ -1,0 +1,99 @@
+<!--(a)	Create HTML5 document that describes nested ordered list  of subjects in the V and VI semesters. The list subject should include lab component if necessary. On clicking particular subject the details of the subject including subject objective, No of classes required, No of credits and prescribed text book should display.-->
+<!doctype HTML>
+<head>
+<title>
+        hello
+</title>
+<script>
+    var objective;
+    var num_class;
+    var textbook;
+    var credits;
+    function anirudh()
+    {
+        alert("anirudh ");
+    }
+    function blehblehbleh(val)
+    {
+        switch(val)
+            {
+                case 1 : alert("CN");
+                         objective="networks systems information ";
+                         num_class=54;
+                         textbook="textbook for cn";
+                         credits=4;
+                         display();
+                         break;
+                case 2 : alert("DBMS");
+                         objective="build and play with databases ";
+                         num_class=54;
+                         textbook="dbms textbook ";
+                         credits=4;
+                         display();
+                         break;
+                case 3 : alert("SE");
+                         objective="engineer software ";
+                         num_class=54;
+                         textbook="software wala book ";
+                         credits=4;
+                         display();
+                         break;
+                case 4 : alert("ITLAB");
+                         objective="this test itself ";
+                         num_class=54;
+                         textbook="google is the best ";
+                         credits=4;
+                         display();
+                         break;
+                case 5 : alert("AI");
+                         objective="publish papers ";
+                         num_class=54;
+                         textbook="class presentations ";
+                         credits=4;
+                         display();
+                        break;
+                case 6 : alert("CD");
+                         objective="sini maam";
+                         num_class=54;
+                         textbook="compiler hindi anirudh ";
+                         credits=4;
+                         display();
+                         break;
+                
+            }
+    }
+    function display()
+    {
+        document.getElementById("objective").innerHTML= "Objective :" + objective +"<br><br>";
+        document.getElementById("credits").innerHTML= "No of classes :" + num_class +"<br><br>";
+        document.getElementById("num_class").innerHTML= "No of credits :" + credits +"<br><br>";
+        document.getElementById("textbook").innerHTML= "Textbook prescribed :" + textbook +"<br><br>";
+    }
+    </script>
+</head>
+
+<body><br>
+    <h1>SUBJECT LIST </h1><br><br><hr>
+    <ul>
+        <li>
+            V SEMESTER<br><br> 
+            <ol>
+            <li id="cn" onclick="blehblehbleh(1)">Computer Networks<br><br></li>
+            <li id="dbms" onclick="blehblehbleh(2)">Database Systems<br><br></li>
+            <li id="se" onclick="blehblehbleh(3)">Software Engineering<br><br></li>
+            </ol>
+        </li>
+        <li>
+            VI SEMESTER 
+    <br><br>        <ol>
+            <li id="itlab" onclick="blehblehbleh(4)">ITLAB<br><br></li>
+            <li id="ai" onclick="blehblehbleh(5)">Artificial Intelligence<br><br></li>
+            <li id="cd" onclick="blehblehbleh(6)">Compiler Design<br><br></li>
+            </ol>
+        </li>
+    </ul>
+<p id="objective"></p>
+<p id="credits"></p>
+<p id="num_class"></p>
+<p id="textbook"></p>
+</body>
