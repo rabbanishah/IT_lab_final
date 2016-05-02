@@ -1,0 +1,9 @@
+cd sites
+rails new DemoApp
+cd DemoApp
+rake db:create
+rails g scaffold user first:string last:string //here u can give any table name and values 
+rake db:migrate
+cd bin
+rails server -b $IP -p $PORT
+in webpage write at last /users
